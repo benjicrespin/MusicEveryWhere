@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/titleSong"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playMusic"
+        android:src="@android:drawable/ic_media_play"
+        android:onClick="playMusic"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pauseMusic"
+        android:src="@android:drawable/ic_media_pause"
+        android:onClick="pauseMusic"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/likeMusic"
+        android:src="@android:drawable/btn_star_big_on"
+        android:onClick="likeMusic"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dislikeMusic"
+        android:src="@android:drawable/ic_menu_delete"
+        android:onClick="dislikeMusic"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
