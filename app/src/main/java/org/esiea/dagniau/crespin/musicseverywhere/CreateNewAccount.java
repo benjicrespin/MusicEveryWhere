@@ -15,7 +15,6 @@ public class CreateNewAccount {
     * email
     * age
     *
-    *
     * Vérife Email
     * MDP 6 caractères
     * Vérif Pseudo

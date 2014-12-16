@@ -25,6 +25,7 @@ public class MainActivity extends Activity{
     List<String> favoriteMusics = new ArrayList<String>();
     List<String> deleteMusics = new ArrayList<String>();
 
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
