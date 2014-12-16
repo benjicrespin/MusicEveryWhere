@@ -5,7 +5,17 @@ package org.esiea.dagniau.crespin.musicseverywhere;
  */
 public class CreateNewAccount {
 
+
+
+
+
     /*
+    * Pseudo
+    * mot de passe
+    * email
+    * age
+    *
+    *
     * Vérife Email
     * MDP 6 caractères
     * Vérif Pseudo

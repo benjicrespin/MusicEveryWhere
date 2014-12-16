@@ -26,6 +26,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,10 +77,15 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         });
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+
+        final EditText emailtext = ((EditText) findViewById(R.id.email));
+        final EditText passwordtext = ((EditText) findViewById(R.id.password));
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+                Toast.makeText(getApplicationContext(), emailtext.getText().toString()+"   "+passwordtext.getText().toString(), Toast.LENGTH_LONG).show();
+                startTest(view);
+                //attemptLogin();
             }
         });
 

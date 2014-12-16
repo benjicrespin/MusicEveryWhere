@@ -21,7 +21,7 @@ import java.util.List;
 public class MainActivity extends Activity{
     MediaPlayer mediaPlayer;
     String urlMusic = "/storage/extSdCard/Music/Workout Motivation Music.mp3";
-    TextView titleSong = (TextView) findViewById(R.id.titleSong);
+    //TextView titleSong = (TextView) findViewById(R.id.titleSong);
     List<String> favoriteMusics = new ArrayList<String>();
     List<String> deleteMusics = new ArrayList<String>();
 
@@ -46,20 +46,19 @@ public class MainActivity extends Activity{
 
     public void playMusic(View v){
       mediaPlayer.start();
-      //titleSong.setText(title);// Changer titre grâce aux fonctions Deezer et Spotify
     }
 
     public void pauseMusic(View v){
         mediaPlayer.pause();
     }
 
-    public void likeMusic(View v){
+    /*public void likeMusic(View v){
         favoriteMusics.add(titleSong.getText().toString());
     }
 
 
     public void dislikeMusic(View v){
         favoriteMusics.add(titleSong.getText().toString());
-    }
+    }*/
 
 }
