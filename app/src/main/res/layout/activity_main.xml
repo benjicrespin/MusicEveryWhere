@@ -2,15 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/activity_main">
+    android:id="@+id/activity_main" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=""
-        android:id="@+id/titleSong"
+        android:text="@string/singer"
         android:layout_gravity="center_horizontal" />
+
+    <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="match_parent">
+
+    <EditText
+     android:id="@+id/Research" android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:layout_gravity="center_horizontal"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DLTask"
+        android:src="@android:drawable/ic_menu_search"
+        android:onClick="onClickTest"
+        android:layout_gravity="right" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -28,20 +53,12 @@
         android:onClick="pauseMusic"
         android:layout_gravity="center_horizontal" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/likeMusic"
-        android:src="@android:drawable/btn_star_big_on"
-        android:onClick="likeMusic"
-        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:id="@+id/DLTaskText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""/>
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dislikeMusic"
-        android:src="@android:drawable/ic_menu_delete"
-        android:onClick="dislikeMusic"
-        android:layout_gravity="center_horizontal" />
+
 
 </LinearLayout>

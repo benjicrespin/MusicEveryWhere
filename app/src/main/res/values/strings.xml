@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MusicsEverywhere</string>
+    <string name="singer">Singer/Group</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="action_test1">Développeurs</string>
+
 </resources>
 

@@ -4,7 +4,8 @@
     android:orientation="vertical" android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin" tools:context=".LoginActivity">
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity">
 
     <!-- Login progress -->
     <ProgressBar android:id="@+id/login_progress" style="?android:attr/progressBarStyleLarge"
@@ -39,11 +40,7 @@
                 android:layout_marginTop="16dp" android:text="@string/create_account"
                 android:textStyle="bold" />
 
-            <Button android:id="@+id/test" style="?android:textAppearanceSmall"
-                android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" android:text="@string/test"
-                android:textStyle="bold"
-                android:onClick="startTest"/>
+
 
 
         </LinearLayout>

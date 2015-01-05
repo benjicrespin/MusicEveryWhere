@@ -4,8 +4,10 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.LoaderManager.LoaderCallbacks;
-import android.content.ContentResolver;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
@@ -18,6 +20,8 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
@@ -77,12 +81,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
 
-        final EditText emailtext = ((EditText) findViewById(R.id.email));
-        final EditText passwordtext = ((EditText) findViewById(R.id.password));
+        //final EditText emailtext = ((EditText) findViewById(R.id.email));
+        //final EditText passwordtext = ((EditText) findViewById(R.id.password));
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), emailtext.getText().toString()+"   "+passwordtext.getText().toString(), Toast.LENGTH_LONG).show();
                 startTest(view);
                 //attemptLogin();
             }
@@ -237,7 +240,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         };
 
         int ADDRESS = 0;
-        int IS_PRIMARY = 1;
+
     }
 
 
@@ -310,6 +313,52 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     public void startTest(View v){
         Intent i = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(i);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            Toast.makeText(getApplicationContext(),"Les Settings ne sont pas accessibles sur cette page.", Toast.LENGTH_LONG).show();
+
+            return true;
+        }
+        if (id == R.id.action_test1) {
+
+            MyDialog mydialog = new MyDialog();
+            mydialog.show(getFragmentManager(), "Benjamin CRESPIN Marie DAGNIAU");
+
+            return true;
+        }
+
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public static class MyDialog extends DialogFragment {
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the Builder class for convenient dialog construction
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setMessage("© 2015 - Benjamin CRESPIN" +" - "+
+                    " Marie DAGNIAU");
+            // Create the AlertDialog object and return it
+            return builder.create();
+        }
+
     }
 }
 
